@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts>
+	<package name="agru" namespace="/" >
+		<interceptors>
+			<!-- 定义拦截器 -->
+			<interceptor name="param" class="com.zb.strutsdemo.struts.interceptors.ParamInterceptor"/>
+			<interceptor name="logger" class="com.zb.strutsdemo.struts.interceptors.LoggerInterceptor"/>
+			<!-- 定义拦截器如何组合 -->
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="param"/>
+				<interceptor-ref name="logger"/>
+			</interceptor-stack>
+			<interceptor-stack name="myParam">
+				<interceptor-ref name="param"/>
+			</interceptor-stack>
+		</interceptors>
+		<!-- action默认使用的拦截器组合 -->
+		<default-interceptor-ref name="myParam"/>
+		<action name="login" class="com.zb.strutsdemo.action.LoginAction">
+			<result name="ok">/ok.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+	</package>
+</struts>

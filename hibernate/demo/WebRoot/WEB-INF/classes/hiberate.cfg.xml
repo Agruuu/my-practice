@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hiberate-configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hiberate.vailtion.xsd">
+	<sessionFactory>
+		<property name="dialect">com.zb.demo.myhiberate.OracleDialect</property>
+		<property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+		<property name="url">jdbc:oracle:thin:@127.0.0.1:1521:orcl</property>
+		<property name="username">accp</property>
+		<property name="password">accp</property>
+	</sessionFactory>
+</hiberate-configuration>

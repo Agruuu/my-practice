@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.zb.demo.entity.Userinfos" table="USERINFOS">
+		<id name="userid" type="java.lang.Integer">
+			<column name="USERID"/>
+			<generator name="sequence">SEQ_USERID</generator>
+		</id>
+		<poperty name="username" type="java.lang.String">
+			<column name="USERNAME"></column>
+		</poperty>
+		<poperty name="password" type="java.lang.String">
+			<column name="PASSWORD"></column>
+		</poperty>
+		<poperty name="birthday" type="java.util.Date">
+			<column name="BIRTHDAY"></column>
+		</poperty>
+	</class>
+</hibernate-mapping>
