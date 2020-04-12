@@ -1,0 +1,6 @@
+
+type Query {
+
+    #车辆信息
+    clxx: ClxxRoot
+}

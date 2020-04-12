@@ -1,0 +1,36 @@
+server:
+  port: 6001
+spring:
+  datasource:
+    name: test
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/graphql?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: root
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+  tools:
+    schemaLocationPattern: "**/*.graphqls"
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+    subscriptions: /subscriptions
+  static:
+    basePath: /
+  enabled: true
+  pageTitle: GraphiQL
+  cdn:
+    enabled: false
+    version: 0.11.11
+  props:
+    resources:
+      query: testquery.query
+      defaultQuery: testquery.query
+    variables:
+      editorTheme: "solarized light"
+  headers:
+    Authorization: "Bearer vdff3344ffs v"

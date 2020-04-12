@@ -1,0 +1,10 @@
+type Result {
+    result: ResultCode!
+    msg: String
+}
+
+enum ResultCode {
+    success
+    fail
+    error
+}

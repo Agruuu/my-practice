@@ -1,0 +1,41 @@
+2019-04-26 00:28:14.390  INFO 7659 --- [main] com.vampire.SellApplication              : Starting SellApplication on bogon with PID 7659 (started by agaru in /Users/agaru/study/1. Java/sell)
+2019-04-26 00:28:14.404  INFO 7659 --- [main] com.vampire.SellApplication              : No active profile set, falling back to default profiles: default
+2019-04-26 00:28:14.483  INFO 7659 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5be6e01c: startup date [Fri Apr 26 00:28:14 CST 2019]; root of context hierarchy
+2019-04-26 00:28:15.286  WARN 7659 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/'
+2019-04-26 00:28:15.291  INFO 7659 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-04-26 00:28:15.301 ERROR 7659 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/'
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at com.vampire.SellApplication.main(SellApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:201) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/'
+	at org.springframework.boot.context.embedded.AbstractConfigurableEmbeddedServletContainer.checkContextPath(AbstractConfigurableEmbeddedServletContainer.java:132) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.context.embedded.AbstractConfigurableEmbeddedServletContainer.setContextPath(AbstractConfigurableEmbeddedServletContainer.java:120) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.autoconfigure.web.ServerProperties.customize(ServerProperties.java:198) ~[spring-boot-autoconfigure-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizerBeanPostProcessor.postProcessBeforeInitialization(EmbeddedServletContainerCustomizerBeanPostProcessor.java:73) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizerBeanPostProcessor.postProcessBeforeInitialization(EmbeddedServletContainerCustomizerBeanPostProcessor.java:59) ~[spring-boot-1.5.20.RELEASE.jar:1.5.20.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:407) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1622) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.23.RELEASE.jar:4.3.23.RELEASE]
+	... 16 common frames omitted
+

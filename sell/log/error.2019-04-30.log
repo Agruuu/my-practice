@@ -1,0 +1,6 @@
+Column 'order_status' cannot be null
+【取消订单】订单状态不正确，orderId = 1556594016663168622, orderStatus = 0
+【支付订单】订单状态不正确, orderId = 1556594016663168622, orderStatus = 1
+【完结订单】订单状态不正确, orderId = 1556594016663168622, orderStatus = 2
+【支付订单】订单状态不正确, orderId = 1556594016663168622, orderStatus = 2
+【支付订单】订单支付状态不正确, orderId = 1556594016663168622, payStatus = 1

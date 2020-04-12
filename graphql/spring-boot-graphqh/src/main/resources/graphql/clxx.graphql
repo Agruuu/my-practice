@@ -1,0 +1,36 @@
+
+type ClxxRoot {
+
+    #新增 cldm必传
+    add(clxx: ClxxVoAdd):Result
+
+    #删除 根据车牌号删除
+    delete(cph: String):Result
+
+    #修改 cldm必传
+    edit(clxx: ClxxVoEdit):Result
+
+    #查询 根据cph模糊查询
+    find(cph: String):[ClxxVo]
+}
+
+input ClxxVoAdd {
+    cldm: String!
+    cph: String
+    cpys: Int
+    vin: String
+}
+
+input ClxxVoEdit {
+    cldm: String!
+    cph: String
+    cpys: Int
+    vin: String
+}
+
+type ClxxVo {
+    cldm: String
+    cph: String
+    cpys: Int
+    vin: String
+}
